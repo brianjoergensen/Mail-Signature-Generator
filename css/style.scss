@@ -1,0 +1,141 @@
+body {
+	background: url('https://skin.sharkgaming.dk/skin/frontend/ultimo/default/images/asfalt.png') repeat;
+}
+
+/* --------------
+Custom styling
+-------------- */
+
+table {
+	// border: 1px solid black;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #666;
+	
+	tr {
+		// border: 1px solid hotpink;
+		
+		td {
+			// border: 1px solid yellow;
+			padding: 0;
+			
+			p, a {
+				display: inline-block;
+				float: left;
+				margin: 2px 0;
+			}
+			
+			a {
+				color: #0373FD;
+			}
+			
+			span {
+				display: inline-block;
+				float: left;
+			}
+		}
+	}
+}
+
+.preview {
+	p {
+		color: #fff;
+	}
+}
+
+.copy-to-clipboard {
+	background: #fff;
+	color: #333;
+	padding: 20px;
+	border-radius: 2px;
+	position: relative;
+	
+	.overlay {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+		background: rgba(255,255,255,0);
+	}
+}
+
+/* --------------
+Materialize Override
+-------------- */
+
+/* button */
+.btn-flat {
+	background-color: rgba(3, 115, 253, 1);
+	color: #fff;
+	&:hover {
+		background-color: rgba(3, 115, 253, 0.5);
+	}
+}
+
+/* forms */
+.input-field {
+	color: #fff;
+}
+
+/* label color */
+.input-field label {
+	color: #fff;
+}
+
+.input-field label.active {
+	color: #555;
+}
+
+.input-field input[type=text],
+.input-field input[type=email] {
+	border-bottom: 1px solid #333;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus + label {
+	color: #0373FD;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus {
+	border-bottom: 1px solid #0373FD;
+	box-shadow: 0 1px 0 0 #000;
+}
+
+/* valid color */
+.input-field input[type=text].valid,
+.input-field input[type=email].valid {
+	border-bottom: 1px solid #0373FD;
+	box-shadow: 0 1px 0 0 #000;
+}
+
+/* invalid color */
+.input-field input[type=text].invalid,
+.input-field input[type=email].invalid {
+	border-bottom: 1px solid red;
+	box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+	color: #000;
+}
+
+/* select dropdown */
+.select-wrapper {
+	span.caret {
+		color: #fff;
+	}
+}
+
+/* colors */
+.dropdown-content {
+	li {
+		span {
+			color: #0373FD;
+		}
+	}
+}

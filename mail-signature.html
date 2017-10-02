@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Mail Signature</title>
+
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+   <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="container">
+   <div class="row">
+      <form class="col s12">
+         
+         <div class="row">
+            <div class="input-field col m6 s12">
+               <input id="first-name-input" type="text" class="validate" onkeyup="firstNamePrev(); checkForInput();">
+               <label for="first-name-input">Fornavn</label>
+            </div>
+            <div class="input-field col m6 s12">
+               <input id="last-name-input" type="text" class="validate" onkeyup="lastNamePrev(); checkForInput();">
+               <label for="last-name-input">Efternavn</label>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="input-field col m4 s12">
+               <input id="email-input" type="email" class="validate" onkeyup="emailPrev(); checkForInput();">
+               <label for="email-input">Email</label>
+            </div>
+            <div class="input-field col m4 s12">
+               <input id="job-title-input" type="text" class="validate" onkeyup="jobTitlePrev(); checkForInput();">
+               <label for="job-title-input">Jobtitel</label>
+            </div>
+            <div class="input-field col m4 s12">
+               <select id="department-select" onchange="departmentPrev(); checkForInput();">
+                  <option value="" disabled selected>Afdeling</option>
+                  <option value="administration">Administration</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="support">Support</option>
+                  <option value="reklamation">Reklamation</option>
+                  <option value="produktion">Produktion</option>
+               </select>
+            </div>
+         </div>
+
+      </form>
+   </div>
+
+   <div class="row">
+      <div class="preview col s12">
+         <p id="first-name-prev"></p>
+         <p id="last-name-prev"></p>
+         <p id="email-prev"></p>
+         <p id="job-title-prev"></p>
+         <p id="department-prev"></p>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col s12">
+         <a class="waves-effect waves-light btn-flat btn-large disabled" id="copyButton" data-clipboard-target=".copy-to-clipboard">
+         <i class="material-icons left">content_copy</i>
+         Kopiér kode</a>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col s12">
+         <div class="copy-to-clipboard">
+            <div class="overlay"></div>
+            <table>
+               <tbody>
+                  <tr><td>&nbsp;</tr>
+                  <tr><td><p>Mvh / Best Regards</p></tr>
+                  <tr><td>&nbsp;</tr>
+                  <tr><td><p id="first-name-copy">Brian</p><span>&nbsp;</span><p id="last-name-copy">Jørgensen</p></td></tr>
+                  <tr><td><p id="job-title-copy">Graphic Designer</p></td></tr>
+                  <!--<tr><td><p id="department_copy">Marketing</p></td></tr>-->
+                  <tr><td><p id="company"><b>Shark Gaming Systems A/S</b></p></td></tr>
+                  <tr><td><a id="email-copy" href="mailto:bj@sharkgaming.dk">bj@sharkgaming.dk</a><span>&nbsp;-&nbsp;</span><a href="https://sharkgaming.dk" target="_blank">https://sharkgaming.dk</a></td></tr>
+                  <tr><td>&nbsp;</tr>
+                  <tr><td><img src="http://sharkgaming.dk/media/mail_sig/sg_mail_sig.png" alt="Shark Gaming Logo"></tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
