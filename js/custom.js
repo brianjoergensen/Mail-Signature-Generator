@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$('select').material_select();
 });
 
-// Preview & get Copy data
+// Preview data
 var firstNameInput      = document.getElementById('first-name-input');
 var lastNameInput       = document.getElementById('last-name-input');
 var emailInput          = document.getElementById('email-input');
@@ -11,10 +11,10 @@ var jobTitleInput       = document.getElementById('job-title-input');
 var departmentSelect    = document.getElementById('department-select');
 var copyButton          = document.getElementById('copyButton');
 
-document.getElementById('first-name-prev').innerHTML     = firstNameInput.value;
+/* document.getElementById('first-name-prev').innerHTML     = firstNameInput.value;
 document.getElementById('last-name-prev').innerHTML      = lastNameInput.value;
 document.getElementById('email-prev').innerHTML          = emailInput.value;
-document.getElementById('job-title-prev').innerHTML      = jobTitleInput.value;
+document.getElementById('job-title-prev').innerHTML      = jobTitleInput.value; */
 
 function firstNamePrev() {
 	document.getElementById('first-name-prev').innerHTML = firstNameInput.value;

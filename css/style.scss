@@ -73,6 +73,10 @@ Materialize Override
 	}
 }
 
+/* .btn-flat.disabled {
+	background-color: rgba(255,255,255,0.1) !important;
+} */
+
 /* forms */
 .input-field {
 	color: #fff;
@@ -133,9 +137,27 @@ Materialize Override
 
 /* colors */
 .dropdown-content {
+	background: #000;
+
 	li {
+	&:hover {
+		background: #050505;
+
+		span {
+			color: #fff;
+		}
+	}
 		span {
 			color: #0373FD;
+		}
+	}
+
+	li.active.selected,
+	li.selected {
+		background: #0373FD;
+		
+		span {
+			color: #fff;
 		}
 	}
 }
